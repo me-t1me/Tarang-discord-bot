@@ -39,7 +39,6 @@ def poem():
     page = requests.get(URL1, headers)
     soup = BeautifulSoup(page.content, 'html.parser')
     title = soup.find(class_="poem").text
-    print(title)
     return(title, author0)
 
 # print(title)
@@ -47,6 +46,10 @@ def poem():
 
 
 bot = commands.Bot(command_prefix='>')
+
+@bot.event
+async def on_ready():
+    print('ready')
 
 @bot.event
 async def on_message(message):
