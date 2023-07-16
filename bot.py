@@ -57,5 +57,5 @@ async def on_message(message):
         (title , author) = poem()
         await message.channel.send(title + "\n-" + author)
 
-bot.run('ODQ3MDU3NjE1NzAzNzY5MTQ4.YK4h4Q.AHvcKV0JKg7dgdE4r-KHbwMfeow')
+bot.run("api_key")
 time.sleep(5)
